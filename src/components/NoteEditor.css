@@ -1,0 +1,9 @@
+.note-editor {
+  position:absolute;
+  height:100px;
+  background-color:red;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  margin-bottom:0px;
+}
