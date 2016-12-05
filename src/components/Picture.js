@@ -1,5 +1,6 @@
 import React from 'react';
 import Note from './Note';
+import NoteListContainer from '../containers/NoteListContainer';
 
 import './Picture.css';
 
@@ -68,7 +69,7 @@ class Picture extends React.Component {
     return (
       <div className="picture" >
         <img role="presentation" draggable="false" src={this.props.imageUrl} onMouseDown={this.handleMouseDown} onMouseMove={this.handleMouseMove} />
-        {this.props.children}
+        <NoteListContainer/>
         {tmpNoteData != null && <Note {...tmpNoteData} />}
       </div>
     );
