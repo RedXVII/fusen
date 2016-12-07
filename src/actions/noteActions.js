@@ -15,6 +15,17 @@ export const setNoteText = (noteId, text) => {
   };
 }
 
+export const transformNote = (noteId, x, y, width, height) => {
+  return {
+    type: types.TRANSFORM_NOTE,
+    noteId,
+    x,
+    y,
+    width,
+    height
+  };
+}
+
 export const setSelectedNote = (noteId) => {
   return {
     type: types.SET_SELECTED_NOTE,

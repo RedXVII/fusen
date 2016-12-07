@@ -8,7 +8,8 @@ import configureStore from './store/configureStore';
 import DevTools from './containers/DevTools.js';
 
 const EXAMPLE_DATA = {
-  picture: "http://res.cloudinary.com/dex67pc5x/image/upload/v1480412158/bXonQgc_dgjo24.png",
+  //http://res.cloudinary.com/dex67pc5x/image/upload/v1480412158/bXonQgc_dgjo24.png
+  picture: "http://image.flaticon.com/icons/png/512/37/37232.png",
   notes: {
     notes:  [{
       id: 1,
