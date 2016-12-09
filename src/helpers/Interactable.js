@@ -9,7 +9,8 @@ export default class Interactable extends Component {
 		draggable: false,
 		resizable: false,
 		draggableOptions: {},
-		resizableOptions: {}
+		resizableOptions: {},
+		events: null
 	}
 
 	render() {
@@ -20,8 +21,9 @@ export default class Interactable extends Component {
 	}
 
 	componentDidMount() {
-		this.interact = interact(findDOMNode(this.node))
-		this.setInteractions()
+		this.interact = interact(findDOMNode(this.node));
+		this.setInteractions();
+		if (this.props.events != null) this.interact.on(this.props.events);
 	}
 
 	componentWillReceiveProps() {
@@ -30,8 +32,8 @@ export default class Interactable extends Component {
 	}
 
 	setInteractions() {
-		if (this.props.draggable) this.interact.draggable(this.props.draggableOptions)
-		if (this.props.resizable) this.interact.resizable(this.props.resizableOptions)
+		if (this.props.draggable) this.interact.draggable(this.props.draggableOptions);
+		if (this.props.resizable) this.interact.resizable(this.props.resizableOptions);
 	}
 }
 
@@ -40,5 +42,6 @@ Interactable.propTypes = {
 	draggable: React.PropTypes.bool,
 	draggableOptions: React.PropTypes.object,
 	resizable: React.PropTypes.bool,
-	resizableOptions: React.PropTypes.object
+	resizableOptions: React.PropTypes.object,
+	events: React.PropTypes.object
 }
