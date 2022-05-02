@@ -38,8 +38,9 @@ class Note extends React.Component {
   }
 
   onMoveEnd(event) {
+    const style = this.getStyle();
     this.setState(this.defaultState);
-    this.props.onMove(this.props.id, this.props.x + event.dx, this.props.y + event.dy, this.props.width, this.props.height);
+    this.props.onMove(this.props.id, style.left, style.top, style.width, style.height);
   }
 
   onResize(event) {
@@ -71,8 +72,7 @@ class Note extends React.Component {
     const style = this.getStyle();
 
     const draggableOptions = {
-      onmove: event => this.onMove(event),
-      onend: event => this.onMoveEnd(event)
+      
     }
 
     const resizableOptions = {
@@ -83,6 +83,8 @@ class Note extends React.Component {
     const events = {
       resizemove: event => this.onResize(event),
       resizeend: event => this.onResizeEnd(event),
+      dragmove: event => this.onMove(event),
+      dragend: event => this.onMoveEnd(event),
       tap: event => this.onClick()
     }
 

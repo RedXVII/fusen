@@ -9,7 +9,7 @@ import DevTools from './containers/DevTools.js';
 
 const EXAMPLE_DATA = {
   //http://res.cloudinary.com/dex67pc5x/image/upload/v1480412158/bXonQgc_dgjo24.png
-  picture: "http://image.flaticon.com/icons/png/512/37/37232.png",
+  picture: "https://i.imgur.com/kNF49qS.png",
   notes: {
     notes:  [{
       id: 1,

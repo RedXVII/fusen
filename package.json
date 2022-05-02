@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "immutability-helper": "^2.0.0",
-    "interact-js": "^2.0.1",
+    "interactjs": "^1.10.11",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^4.4.6",
